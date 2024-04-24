@@ -2,7 +2,7 @@
   <div>
     <h2>About Page test</h2>
     {{ data }}
-
+    <p></p>
     <!-- <div>
       <input placeholder="Write your currency" type="text" v-model="currency" />
       <div>{{ currency }}</div>
