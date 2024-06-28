@@ -1,8 +1,8 @@
 <template>
   <div>
     <h2>Home Page</h2>
-    <input type="text" @input="updateData" :value="reactiveStorageData" />
-    {{ reactiveStorageData }}
+    <!-- <input type="text" @input="updateData" :value="reactiveStorageData" /> -->
+    <!-- {{ reactiveStorageData }} -->
     <input v-model="query" placeholder="Search for a GitHub user" />
     query {{ query }}
     <input type="text" placeholder="Type your city" v-model="city" />
