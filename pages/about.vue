@@ -3,6 +3,9 @@
     <h2>About Page test</h2>
     {{ data }}
     <p></p>
+    <input type="text" v-model="inputValue" :maxlength="maxLength" />
+    {{ countLength }}/{{ maxLength }}
+
     <!-- <div>
       <input placeholder="Write your currency" type="text" v-model="currency" />
       <div>{{ currency }}</div>
@@ -19,6 +22,19 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
+
+const inputValue = ref("");
+const maxLength = ref(200);
+
+const countLength = computed(() =>
+  // let length = props.note.length
+  // let name = length > 1 ? 'charakter' : 'charakters'
+  // return '${ length } ${ name }'
+  inputValue.value.length <= maxLength.value
+    ? inputValue.value.length
+    : maxLength.value
+);
 // const { data } = await useFetch("/api/currency/allCurrency");
 
 // Dynamic server routes
@@ -33,6 +49,13 @@ const { data } = await useFetch("/api/currency/EUR");
 //     currency = "";
 //   }
 // };
+
+// const deleteNotes = (id) => {
+//   notes.value = notes.value.filter(note => {
+//     return note.id !== id
+//   })
+// }
+
 useHead({
   title: "About page",
 });
