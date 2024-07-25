@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@formkit/nuxt"],
   css: ["~/assets/scss/main.scss"],
   ssr: false,
+  // mode: "universal",
   formkit: {
     autoImport: true,
   },
