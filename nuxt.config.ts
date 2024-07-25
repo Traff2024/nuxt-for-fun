@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   css: ["~/assets/scss/main.scss"],
   ssr: false,
   // mode: "universal",
+  nitro: {
+    preset: "node-server",
+  },
   formkit: {
     autoImport: true,
   },
