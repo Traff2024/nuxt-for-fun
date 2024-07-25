@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>About Page test</h2>
-    {{ data }}
+    <!-- {{ data }} -->
     <p></p>
     <input type="text" v-model="inputValue" :maxlength="maxLength" />
     {{ countLength }}/{{ maxLength }}
@@ -38,7 +38,7 @@ const countLength = computed(() =>
 // const { data } = await useFetch("/api/currency/allCurrency");
 
 // Dynamic server routes
-const { data } = await useFetch("/api/currency/EUR");
+// const { data } = await useFetch("/api/currency/EUR");
 
 // Test write currency for check actual course
 // const currency = ref();
