@@ -9,7 +9,8 @@
           <li>
             <Nuxt-link to="/products" class="btn-buy">Products</Nuxt-link>
           </li>
-          <li><Nuxt-link to="/contact">Contact</Nuxt-link></li>
+          <li><Nuxt-link to="/form">Contact</Nuxt-link></li>
+          <li><Nuxt-link to="/dots">Dots Game</Nuxt-link></li>
         </ul>
       </nav>
     </header>

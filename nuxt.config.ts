@@ -1,8 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
+  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@formkit/nuxt"],
   css: ["~/assets/scss/main.scss"],
+  ssr: false,
+  formkit: {
+    autoImport: true,
+  },
+  // plugins: [{ src: "~/pages/web3.vue", mode: "client" }],
   app: {
     head: {
       title: "Nuxt app",

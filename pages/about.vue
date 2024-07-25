@@ -5,7 +5,7 @@
     <p></p>
     <input type="text" v-model="inputValue" :maxlength="maxLength" />
     {{ countLength }}/{{ maxLength }}
-
+    <!-- test{{ test }} -->
     <!-- <div>
       <input placeholder="Write your currency" type="text" v-model="currency" />
       <div>{{ currency }}</div>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 
 const inputValue = ref("");
 const maxLength = ref(200);
@@ -55,7 +55,11 @@ const { data } = await useFetch("/api/currency/EUR");
 //     return note.id !== id
 //   })
 // }
-
+// const test = ref(null);
+// onMounted(async () => {
+//   const { data } = await useFetch("/api/currency/allCurrency");
+//   test.value = data;
+// }),
 useHead({
   title: "About page",
 });

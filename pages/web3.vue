@@ -1,8 +1,9 @@
 <script setup>
+import { onMounted } from "vue";
 import { createWeb3Modal, defaultWagmiConfig } from "@web3modal/wagmi";
 
-import { mainnet, arbitrum } from "viem/chains";
-import { reconnect } from "@wagmi/core";
+import { mainnet, arbitrum, sepolia } from "viem/chains";
+import { reconnect, getAccount } from "@wagmi/core";
 
 // 1. Define constants
 const projectId = "YOUR_PROJECT_ID";
@@ -15,7 +16,7 @@ const metadata = {
   icons: ["https://avatars.githubusercontent.com/u/37784886"],
 };
 
-const chains = [mainnet, arbitrum];
+const chains = [mainnet, arbitrum, sepolia];
 const config = defaultWagmiConfig({
   chains,
   projectId,
@@ -35,6 +36,6 @@ createWeb3Modal({
 <template>
   <div>
     test page
-    <w3m-button />
+    <w3m-button></w3m-button>
   </div>
 </template>
