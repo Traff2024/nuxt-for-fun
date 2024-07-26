@@ -4,18 +4,14 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@formkit/nuxt"],
   css: ["~/assets/scss/main.scss"],
   ssr: false,
-  target: "static", // Статичний сайт
-  router: {
-    base: "/nuxt-app/", // База для маршрутизації
-  },
-  generate: {
-    fallback: true, // Якщо немає налаштованого роуту, використовувати fallback
+  //target: "static",
+  nitro: {
+    preset: "static",
   },
   // mode: "universal",
   // nitro: {
   //   preset: "node-server",
   // },
-  nitro: { prerender: { failOnError: false } },
   formkit: {
     autoImport: true,
   },
