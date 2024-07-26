@@ -89,7 +89,7 @@ watch(localny, (newValue) => {
 const updateData = (e) => {
   const data = e.target.value;
   if (data) {
-    localStorage.setItem("test", data || " ");
+    // localStorage.setItem("test", data || " ");
     // reactiveStorageData.value = data;
   }
 };
@@ -143,6 +143,9 @@ onMounted(() => {
   console.log(runtimeConfig.apiSecret);
   testAsyncFunc();
   localny.value = localStorage.getItem("test") || "";
+  if (localny.value == 777) {
+    alert("777 dziala");
+  }
 });
 </script>
 
