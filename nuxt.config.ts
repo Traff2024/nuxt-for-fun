@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   // nitro: {
   //   preset: "node-server",
   // },
+  nitro: { prerender: { failOnError: false } },
   formkit: {
     autoImport: true,
   },
