@@ -3,10 +3,10 @@
     <h2>Products page</h2>
     <div class="grid grid-cols-4 gap-5">
       <div v-for="product in products" :key="product.id">
-        <!-- <ProductCard
+        <ProductCard
           :product="product"
           @emit-delete-selected-items="deleteSelectedItems"
-        /> -->
+        />
       </div>
     </div>
   </div>
