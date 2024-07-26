@@ -4,6 +4,13 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@formkit/nuxt"],
   css: ["~/assets/scss/main.scss"],
   ssr: false,
+  target: "static", // Статичний сайт
+  router: {
+    base: "/nuxt-app/", // База для маршрутизації
+  },
+  generate: {
+    fallback: true, // Якщо немає налаштованого роуту, використовувати fallback
+  },
   // mode: "universal",
   // nitro: {
   //   preset: "node-server",
@@ -14,7 +21,7 @@ export default defineNuxtConfig({
   },
   // plugins: [{ src: "~/pages/web3.vue", mode: "client" }],
   app: {
-    baseURL: "/nuxt-for-fun/",
+    baseURL: "/nuxt-app/",
     buildAssetsDir: "assets",
     head: {
       title: "Nuxt app",
