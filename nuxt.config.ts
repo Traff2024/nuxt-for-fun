@@ -13,6 +13,8 @@ export default defineNuxtConfig({
   },
   // plugins: [{ src: "~/pages/web3.vue", mode: "client" }],
   app: {
+    baseURL: "/nuxt-for-fun/",
+    buildAssetsDir: "assets",
     head: {
       title: "Nuxt app",
       meta: [{ name: "description", content: "Everythink about Nuxt3" }],

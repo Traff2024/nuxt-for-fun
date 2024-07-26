@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -15,6 +16,7 @@
     "@wagmi/connectors": "^4.3.3",
     "@wagmi/core": "^2.9.1",
     "@web3modal/wagmi": "^4.1.11",
+    "gh-pages": "^6.1.1",
     "nuxt": "^3.11.2",
     "pinia": "^2.1.7",
     "viem": "^2.10.2",
